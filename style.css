@@ -6,7 +6,16 @@
 }
 body{
     background: #222;
-}
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://assets.cntraveller.in/photos/67d9589d776f75ba23d7b7a4/16:9/w_1280,c_limit/lead.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
 .card{
     width: 90%;
     max-width:470px;

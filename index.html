@@ -10,25 +10,25 @@
         <div class="search">
             <input type="text" placeholder="enter city name"
             spellcheck="false">
-            <button><img src="C:\Users\Admin\Documents\DOWNLOAD\weatherApp\images\images\search.png"></button>
+            <button><img src="./images/images/search.png"></button>
         </div>
         <div class="error">
             <p>Invalid city name</p>
         </div>
         <div class="weather">
-            <img src="C:\Users\Admin\Documents\DOWNLOAD\weatherApp\images\images\rain.png" class="weather-icon">
+            <img src="./images/images/clouds.png" class="weather-icon">
             <h1 class="temp">22°C</h1>
             <h2 class="city">New York</h2>
             <div class="details">
                 <div class="col">
-                    <img src="C:\Users\Admin\Documents\DOWNLOAD\weatherApp\images\images\humidity.png">
+                    <img src="./images/images/humidity.png">
                     <div>
                         <p class="humidity">50%</p>
                         <p>Humidity</p>
                     </div>
                 </div>
                 <div class="col">
-                    <img src="C:\Users\Admin\Documents\DOWNLOAD\weatherApp\images\images\wind.png">
+                    <img src="./images/images/wind.png">
                     <div>
                         <p class="wind">15km</p>
                         <p>wind Speed</p>
@@ -48,7 +48,7 @@
 
 
         async function checkWeather(city){
-            const response=await fetch(apiUrl + city + `&appid=${apikey}`);
+            const response = await fetch(`${apiUrl}${city}&appid=${apikey}`);
 
             if(response.status==404)
         {
@@ -65,21 +65,21 @@
             document.querySelector(".wind").innerHTML=data.wind.speed+"km/hr ";
             
             if(data.weather[0].main == "Clouds"){
-                weatherIcon.src ="C:\Users\Admin\Documents\DOWNLOAD\weatherApp\images\images\clouds.png";
+                weatherIcon.src ="./images/images/clouds.png";
 
             }
             else if(data.weather[0].main == "Clear"){
-                weatherIcon.src ="C:\Users\Admin\Documents\DOWNLOAD\weatherApp\images\images\clear.png";
+                weatherIcon.src ="./images/images/clear.png";
             }
             else if(data.weather[0].main == "Rain"){
-                weatherIcon.src ="C:\Users\Admin\Documents\DOWNLOAD\weatherApp\images\images\rain.png";
+                weatherIcon.src ="./images/images/rain.png";
 
             }
-            else if(data.weather[0].main == "drizzle"){
-                weatherIcon.src ="C:\Users\Admin\Documents\DOWNLOAD\weatherApp\images\images\drizzle.png";
+            else if(data.weather[0].main == "Drizzle"){
+                weatherIcon.src ="./images/images/drizzle.png";
             }
             else if(data.weather[0].main == "Mist"){
-                weatherIcon.src ="C:\Users\Admin\Documents\DOWNLOAD\weatherApp\images\images\mist.png";
+                weatherIcon.src ="./images/images/mist.png";
 
             }
 
